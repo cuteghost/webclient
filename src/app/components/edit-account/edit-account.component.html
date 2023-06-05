@@ -1,0 +1,60 @@
+<h2>Edit Account Details</h2>
+
+<form [formGroup]="accountForm" (ngSubmit)="saveChanges()">
+  <!-- Form fields for account details -->
+  <div>
+    <label>First Name:</label>
+    <input type="text" formControlName="firstName" />
+  </div>
+  <div>
+    <label>Last Name:</label>
+    <input type="text" formControlName="lastName" />
+  </div>
+  <div>
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+  </div>
+  <div>
+    <label>Birth Date:</label>
+    <input type="date" formControlName="birthDate" />
+  </div>
+  <div>
+    <label>JMBG:</label>
+    <input type="text" formControlName="jmbg" />
+  </div>
+  <div>
+    <label>Address:</label>
+    <input type="text" formControlName="address" />
+  </div>
+  <div>
+    <label>Telephone:</label>
+    <input type="text" formControlName="telephone" />
+  </div>
+  <div>
+    <label>Gender:</label>
+    <select formControlName="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+  </div>
+
+  <button type="submit">Save Changes</button>
+</form>
+
+<hr>
+
+<h2>Change Password</h2>
+
+<form [formGroup]="passwordForm" (ngSubmit)="changePassword()">
+  <!-- Form fields for password change -->
+  <div>
+    <label>Current Password:</label>
+    <input type="password" formControlName="oldPassword" />
+  </div>
+  <div>
+    <label>New Password:</label>
+    <input type="password" formControlName="newPassword" />
+  </div>
+
+  <button type="submit">Change Password</button>
+</form>

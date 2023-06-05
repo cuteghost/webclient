@@ -1,0 +1,43 @@
+<div>
+    <h1>Signup</h1>
+    <form (ngSubmit)="signup()" class="form-container">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" required>
+      
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" required>
+      
+      <label for="birthDate">Birth Date:</label>
+      <input type="date" id="birthDate" name="birthDate" [(ngModel)]="birthDate" required>
+      
+      <label for="jmbg">JMBG:</label>
+      <input type="text" id="jmbg" name="jmbg" [(ngModel)]="jmbg" required>
+      
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" [(ngModel)]="gender" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" [(ngModel)]="address" required></textarea>
+      
+      <label for="telephone">Telephone:</label>
+      <input type="tel" id="telephone" name="telephone" [(ngModel)]="telephone" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      
+      <button type="submit">Signup</button>
+    </form>
+  
+    <div>
+      <p>Already have an account? <a routerLink="/signin">Sign In</a></p>
+      <p>Forgot your password? <a routerLink="/forgot-password">Forgot Password</a></p>
+    </div>
+  </div>
+  
