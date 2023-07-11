@@ -13,6 +13,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EditAccountComponent } from './components/edit-account/edit-account.component';
+import { AddStaffComponent } from './components/add-staff/add-staff.component';
+import { EditStaffComponent } from './components/edit-staff/edit-staff.component';
+import { StaffListComponent } from './staff-list/staff-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { EditAccountComponent } from './components/edit-account/edit-account.com
     ForgotPasswordComponent,
     SignupComponent,
     DashboardComponent,
-    EditAccountComponent
+    EditAccountComponent,
+    AddStaffComponent,
+    EditStaffComponent,
+    StaffListComponent
   ],
   imports: [
     BrowserModule,
