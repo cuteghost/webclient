@@ -1,0 +1,52 @@
+<form [formGroup]="staffForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" formControlName="firstName" required>
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" formControlName="lastName" required>
+    </div>
+    <div>
+      <label for="birthDate">Birth Date:</label>
+      <input type="date" id="birthDate" formControlName="birthDate" required>
+    </div>
+    <div>
+      <label for="jmbg">JMBG:</label>
+      <input type="text" id="jmbg" formControlName="jmbg" required>
+    </div>
+    <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" formControlName="gender" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" required>
+    </div>
+    <div>
+      <label for="joined">Joined:</label>
+      <input type="date" id="joined" formControlName="joined" required>
+    </div>
+    <div>
+      <label for="certification">Certification:</label>
+      <input type="text" id="certification" formControlName="certification">
+    </div>
+    <div>
+      <label for="education">Education:</label>
+      <input type="text" id="education" formControlName="education">
+    </div>
+    <div>
+      <label for="languages">Languages:</label>
+      <input type="text" id="languages" formControlName="languages">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  
