@@ -10,8 +10,6 @@ import { Component, OnInit } from '@angular/core';
       './../../../assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css',
       './../../../assets/lib/twentytwenty/twentytwenty.css',
       './../../../assets/css/style.css',
-      // './../../../../node_modules/bootstrap/dist/css/bootstrap.min.css',
-      // './../../../../node_modules/bootstrap/scss/bootstrap.scss',
 
   ]
 })
