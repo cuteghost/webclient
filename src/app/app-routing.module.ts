@@ -7,9 +7,11 @@ import { SignupComponent } from './components/signup/signup.component';
 import { EditAccountComponent } from './components/edit-account/edit-account.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+  { path: 'about', component: AboutComponent},
   { path: 'appointment', component: AppointmentComponent},
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },

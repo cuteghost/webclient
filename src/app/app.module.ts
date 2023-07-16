@@ -18,6 +18,7 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNavbarComponent } from './components/page-navbar/page-navbar.component';
 import { PageFooterComponent } from './components/page-footer/page-footer.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PageFooterComponent } from './components/page-footer/page-footer.compon
     TopbarComponent,
     HomeComponent,
     PageNavbarComponent,
-    PageFooterComponent
+    PageFooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
