@@ -9,16 +9,17 @@ import { HomeComponent } from './pages/home/home.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-
+import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  {path:'contact', component: ContactComponent},
+  { path:'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent},
   { path: 'appointment', component: AppointmentComponent},
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'edit-account', component: EditAccountComponent}
+  { path: 'edit-account', component: EditAccountComponent},
+  { path:'dashboard', component: DoctorDashboardComponent }
 
 ];
 
