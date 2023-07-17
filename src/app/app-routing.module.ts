@@ -11,6 +11,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PriceComponent } from './pages/price/price.component';
 import { ServiceComponent } from './pages/service/service.component';
+import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'edit-account', component: EditAccountComponent},
-  {path: 'price', component: PriceComponent}
+  {path: 'price', component: PriceComponent},
+  { path:'dashboard', component: DoctorDashboardComponent }
 
 ];
 

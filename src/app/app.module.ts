@@ -22,6 +22,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PriceComponent } from './pages/price/price.component';
 import { ServiceComponent } from './pages/service/service.component';
+import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,10 @@ import { ServiceComponent } from './pages/service/service.component';
     AboutComponent,
     ContactComponent,
     PriceComponent,
-    ServiceComponent
+    ServiceComponent,
+    DoctorDashboardComponent,
+    SidebarComponent
+
   ],
   imports: [
     BrowserModule,
