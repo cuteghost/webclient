@@ -1,43 +1,77 @@
-<div>
-    <h1>Signup</h1>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./../../../assets/lib/wow/wow.min.js"></script>
+<script src="./../../../assets/lib/easing/easing.min.js"></script>
+<script src="./../../../assets/lib/waypoints/waypoints.min.js"></script>
+<script src="./../../../assets/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="./../../../assets/lib/tempusdominus/js/moment.min.js"></script>
+<script src="./../../../assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="./../../../assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="./../../../assets/lib/twentytwenty/jquery.event.move.js"></script>
+<script src="./../../../assets/lib/twentytwenty/jquery.twentytwenty.js"></script>
+
+<!-- Template Javascript -->
+<script src="./../../../assets/js/main.js"></script>
+
+<app-topbar></app-topbar>
+<app-page-navbar></app-page-navbar>
+
+<br><br><br><br><br><br><!-- ignoriraj ovaj amaterizam -->
+
+
+  <!-- Signup Start -->
+
+<div class="wrapper fadeInDown">
+    <h2>Sign Up</h2>
     <form (ngSubmit)="signup()" class="form-container">
       <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" required>
+      <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" required><br>
       
       <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" required>
+      <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" required><br>
       
       <label for="birthDate">Birth Date:</label>
-      <input type="date" id="birthDate" name="birthDate" [(ngModel)]="birthDate" required>
+      <input type="date" id="birthDate" name="birthDate" [(ngModel)]="birthDate" required><br>
       
       <label for="jmbg">JMBG:</label>
-      <input type="text" id="jmbg" name="jmbg" [(ngModel)]="jmbg" required>
+      <input type="text" id="jmbg" name="jmbg" [(ngModel)]="jmbg" required><br>
       
       <label for="gender">Gender:</label>
-      <select id="gender" name="gender" [(ngModel)]="gender" required>
+      <select id="gender" name="gender" [(ngModel)]="gender" required><br>
         <option value="">Select</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
-      </select>
+      </select><br>
       
       <label for="address">Address:</label>
-      <textarea id="address" name="address" [(ngModel)]="address" required></textarea>
+      <textarea id="address" name="address" [(ngModel)]="address" required></textarea><br>
       
       <label for="telephone">Telephone:</label>
-      <input type="tel" id="telephone" name="telephone" [(ngModel)]="telephone" required>
+      <input type="tel" id="telephone" name="telephone" [(ngModel)]="telephone" required><br>
       
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required><br>
       
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" [(ngModel)]="password" required>
       
-      <button type="submit">Signup</button>
+      <button type="submit">Sign up</button>
     </form>
   
     <div>
-      <p>Already have an account? <a routerLink="/signin">Sign In</a></p>
-      <p>Forgot your password? <a routerLink="/forgot-password">Forgot Password</a></p>
+     <p>Already have an account? <a routerLink="/signin">Sign In </a></p>
+   <p>Forgot your password?<a routerLink="/forgot-password">Forgot Password</a></p>
     </div>
   </div>
-  
+
+  <!-- Signup End -->
+  <!-- Newsletter Start -->
+<div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
+  <div class="container">
+      
+  </div>
+</div>
+
+<!-- Newsletter End -->
+<app-page-footer></app-page-footer>
