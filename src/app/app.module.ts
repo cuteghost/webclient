@@ -20,6 +20,8 @@ import { PageNavbarComponent } from './components/page-navbar/page-navbar.compon
 import { PageFooterComponent } from './components/page-footer/page-footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { PriceComponent } from './pages/price/price.component';
+import { ServiceComponent } from './pages/service/service.component';
 import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
@@ -38,8 +40,11 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     PageFooterComponent,
     AboutComponent,
     ContactComponent,
+    PriceComponent,
+    ServiceComponent,
     DoctorDashboardComponent,
     SidebarComponent
+
   ],
   imports: [
     BrowserModule,
