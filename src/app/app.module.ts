@@ -21,6 +21,7 @@ import { PageFooterComponent } from './components/page-footer/page-footer.compon
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PriceComponent } from './pages/price/price.component';
+import { ServiceComponent } from './pages/service/service.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PriceComponent } from './pages/price/price.component';
     PageFooterComponent,
     AboutComponent,
     ContactComponent,
-    PriceComponent
+    PriceComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,

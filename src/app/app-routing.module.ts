@@ -10,10 +10,12 @@ import { AppointmentComponent } from './pages/appointment/appointment.component'
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PriceComponent } from './pages/price/price.component';
+import { ServiceComponent } from './pages/service/service.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   {path:'contact', component: ContactComponent},
+  {path: 'service', component: ServiceComponent},
   { path: 'about', component: AboutComponent},
   { path: 'appointment', component: AppointmentComponent},
   { path: 'login', component: LoginComponent },
