@@ -13,6 +13,17 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EditAccountComponent } from './components/edit-account/edit-account.component';
+import { AppointmentComponent } from './pages/appointment/appointment.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PageNavbarComponent } from './components/page-navbar/page-navbar.component';
+import { PageFooterComponent } from './components/page-footer/page-footer.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { PriceComponent } from './pages/price/price.component';
+import { ServiceComponent } from './pages/service/service.component';
+import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +32,19 @@ import { EditAccountComponent } from './components/edit-account/edit-account.com
     ForgotPasswordComponent,
     SignupComponent,
     DashboardComponent,
-    EditAccountComponent
+    EditAccountComponent,
+    AppointmentComponent,
+    TopbarComponent,
+    HomeComponent,
+    PageNavbarComponent,
+    PageFooterComponent,
+    AboutComponent,
+    ContactComponent,
+    PriceComponent,
+    ServiceComponent,
+    DoctorDashboardComponent,
+    SidebarComponent
+
   ],
   imports: [
     BrowserModule,
