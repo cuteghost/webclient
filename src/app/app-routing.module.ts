@@ -15,7 +15,7 @@ import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashbo
 import { PatientsPageComponent } from './pages/patients-page/patients-page.component';
 import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
 import { InvoicesComponent } from './pages/invoices/invoices.component';
-
+import { AddPatientComponent } from './pages/add-patient/add-patient.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path:'contact', component: ContactComponent },
@@ -30,7 +30,8 @@ const routes: Routes = [
   { path:'dashboard', component: DoctorDashboardComponent },
   { path:'patients', component:PatientsPageComponent },
   { path:'appointments', component:AppointmentsPageComponent},
-  { path: 'invoices', component: InvoicesComponent}
+  { path: 'invoices', component: InvoicesComponent},
+  { path: 'add-patient', component:  AddPatientComponent}
 ];
 
 @NgModule({

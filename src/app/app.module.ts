@@ -29,6 +29,7 @@ import { MessagesSidebarComponent } from './components/messages-sidebar/messages
 import { PatientsPageComponent } from './pages/patients-page/patients-page.component';
 import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
 import { InvoicesComponent } from './pages/invoices/invoices.component';
+import { AddPatientComponent } from './pages/add-patient/add-patient.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { InvoicesComponent } from './pages/invoices/invoices.component';
     MessagesSidebarComponent,
     PatientsPageComponent,
     AppointmentsPageComponent,
-    InvoicesComponent
+    InvoicesComponent,
+    AddPatientComponent
 
   ],
   imports: [
