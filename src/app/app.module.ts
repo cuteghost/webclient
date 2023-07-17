@@ -27,6 +27,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardHeaderComponent } from './components/dashboard-header/dashboard-header.component';
 import { MessagesSidebarComponent } from './components/messages-sidebar/messages-sidebar.component';
 import { PatientsPageComponent } from './pages/patients-page/patients-page.component';
+import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { PatientsPageComponent } from './pages/patients-page/patients-page.compo
     SidebarComponent,
     DashboardHeaderComponent,
     MessagesSidebarComponent,
-    PatientsPageComponent
+    PatientsPageComponent,
+    AppointmentsPageComponent
 
   ],
   imports: [
