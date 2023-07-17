@@ -16,6 +16,10 @@ import { PatientsPageComponent } from './pages/patients-page/patients-page.compo
 import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
 import { InvoicesComponent } from './pages/invoices/invoices.component';
 import { AddPatientComponent } from './pages/add-patient/add-patient.component';
+import { EditPatientComponent } from './pages/edit-patient/edit-patient.component';
+import { EditInvoiceComponent } from './pages/edit-invoice/edit-invoice.component';
+import { ViewInvoiceComponent } from './pages/view-invoice/view-invoice.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path:'contact', component: ContactComponent },
@@ -31,7 +35,10 @@ const routes: Routes = [
   { path:'patients', component:PatientsPageComponent },
   { path:'appointments', component:AppointmentsPageComponent},
   { path: 'invoices', component: InvoicesComponent},
-  { path: 'add-patient', component:  AddPatientComponent}
+  { path: 'add-patient', component:  AddPatientComponent},
+  { path:'edit-patient', component: EditPatientComponent},
+  { path:'edit-invoice', component: EditInvoiceComponent},
+  {path: 'view-invoice', component: ViewInvoiceComponent}
 ];
 
 @NgModule({
