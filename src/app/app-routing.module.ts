@@ -13,7 +13,7 @@ import { PriceComponent } from './pages/price/price.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
 import { PatientsPageComponent } from './pages/patients-page/patients-page.component';
-
+import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path:'contact', component: ContactComponent },
@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'edit-account', component: EditAccountComponent },
   { path: 'price', component: PriceComponent },
   { path:'dashboard', component: DoctorDashboardComponent },
-  { path:'patients', component:PatientsPageComponent }
+  { path:'patients', component:PatientsPageComponent },
+  { path:'appointments', component:AppointmentsPageComponent}
 
 ];
 
