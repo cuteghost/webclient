@@ -25,6 +25,7 @@ import { ServiceComponent } from './pages/service/service.component';
 import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardHeaderComponent } from './components/dashboard-header/dashboard-header.component';
+import { MessagesSidebarComponent } from './components/messages-sidebar/messages-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DashboardHeaderComponent } from './components/dashboard-header/dashboar
     ServiceComponent,
     DoctorDashboardComponent,
     SidebarComponent,
-    DashboardHeaderComponent
+    DashboardHeaderComponent,
+    MessagesSidebarComponent
 
   ],
   imports: [
