@@ -12,19 +12,21 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PriceComponent } from './pages/price/price.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
+import { PatientsPageComponent } from './pages/patients-page/patients-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  {path:'contact', component: ContactComponent},
-  {path: 'service', component: ServiceComponent},
-  { path: 'about', component: AboutComponent},
-  { path: 'appointment', component: AppointmentComponent},
+  { path:'contact', component: ContactComponent },
+  { path: 'service', component: ServiceComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'appointment', component: AppointmentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'edit-account', component: EditAccountComponent},
-  {path: 'price', component: PriceComponent},
-  { path:'dashboard', component: DoctorDashboardComponent }
+  { path: 'edit-account', component: EditAccountComponent },
+  { path: 'price', component: PriceComponent },
+  { path:'dashboard', component: DoctorDashboardComponent },
+  { path:'patients', component:PatientsPageComponent }
 
 ];
 
