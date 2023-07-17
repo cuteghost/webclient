@@ -33,6 +33,7 @@ import { AddPatientComponent } from './pages/add-patient/add-patient.component';
 import { EditPatientComponent } from './pages/edit-patient/edit-patient.component';
 import { EditInvoiceComponent } from './pages/edit-invoice/edit-invoice.component';
 import { ViewInvoiceComponent } from './pages/view-invoice/view-invoice.component';
+import { AddAppointmentComponent } from './pages/add-appointment/add-appointment.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ViewInvoiceComponent } from './pages/view-invoice/view-invoice.componen
     AddPatientComponent,
     EditPatientComponent,
     EditInvoiceComponent,
-    ViewInvoiceComponent
+    ViewInvoiceComponent,
+    AddAppointmentComponent
 
   ],
   imports: [
