@@ -58,8 +58,8 @@ const routes: Routes = [
   { path: 'chat', component:ChatComponent },
 
   { path: 'assets', component:AssetsComponent },
-  { path: 'edit-assets', component:EditAssetsComponent },
-  { path: 'add-assets', component:AddAssetsComponent },
+  { path: 'edit-asset', component:EditAssetsComponent },
+  { path: 'add-asset', component:AddAssetsComponent },
 
 
 ];
