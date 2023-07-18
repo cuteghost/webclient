@@ -22,6 +22,7 @@ import { InvoicesComponent } from './pages/invoices/invoices.component';
 import { AddInvoiceComponent } from './pages/add-invoice/add-invoice.component';
 import { EditInvoiceComponent } from './pages/edit-invoice/edit-invoice.component';
 import { ViewInvoiceComponent } from './pages/view-invoice/view-invoice.component';
+import { ChatComponent } from './pages/chat/chat.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -50,6 +51,8 @@ const routes: Routes = [
   { path: 'edit-invoice', component: EditInvoiceComponent },
   { path: 'view-invoice', component: ViewInvoiceComponent },
   { path: 'add-invoice', component: AddInvoiceComponent },
+
+  { path: 'chat', component:ChatComponent },
 ];
 
 @NgModule({

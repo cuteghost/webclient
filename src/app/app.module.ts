@@ -36,6 +36,9 @@ import { ViewInvoiceComponent } from './pages/view-invoice/view-invoice.componen
 import { AddAppointmentComponent } from './pages/add-appointment/add-appointment.component';
 import { EditAppointmentComponent } from './pages/edit-appointment/edit-appointment.component';
 import { AddInvoiceComponent } from './pages/add-invoice/add-invoice.component';
+import { ChatComponent } from './pages/chat/chat.component';
+import { ChatSidebarComponent } from './components/chat-sidebar/chat-sidebar.component';
+import { ChatProfileComponent } from './components/chat-profile/chat-profile.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,10 @@ import { AddInvoiceComponent } from './pages/add-invoice/add-invoice.component';
     ViewInvoiceComponent,
     AddAppointmentComponent,
     EditAppointmentComponent,
-    AddInvoiceComponent
+    AddInvoiceComponent,
+    ChatComponent,
+    ChatSidebarComponent,
+    ChatProfileComponent
 
   ],
   imports: [
