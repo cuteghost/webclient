@@ -13,34 +13,43 @@ import { PriceComponent } from './pages/price/price.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
 import { PatientsPageComponent } from './pages/patients-page/patients-page.component';
-import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
-import { InvoicesComponent } from './pages/invoices/invoices.component';
 import { AddPatientComponent } from './pages/add-patient/add-patient.component';
 import { EditPatientComponent } from './pages/edit-patient/edit-patient.component';
+import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
+import { AddAppointmentComponent } from './pages/add-appointment/add-appointment.component';
+import { EditAppointmentComponent } from './pages/edit-appointment/edit-appointment.component';
+import { InvoicesComponent } from './pages/invoices/invoices.component';
+import { AddInvoiceComponent } from './pages/add-invoice/add-invoice.component';
 import { EditInvoiceComponent } from './pages/edit-invoice/edit-invoice.component';
 import { ViewInvoiceComponent } from './pages/view-invoice/view-invoice.component';
-import { AddAppointmentComponent } from './pages/add-appointment/add-appointment.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path:'contact', component: ContactComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'service', component: ServiceComponent },
   { path: 'about', component: AboutComponent },
   { path: 'appointment', component: AppointmentComponent },
-  { path: 'login', component: LoginComponent },
+  
   { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'edit-account', component: EditAccountComponent },
   { path: 'price', component: PriceComponent },
-  { path:'dashboard', component: DoctorDashboardComponent },
-  { path:'patients', component:PatientsPageComponent },
-  { path:'appointments', component:AppointmentsPageComponent},
-  {path: 'add-appointment', component: AddAppointmentComponent},
-  { path: 'invoices', component: InvoicesComponent},
-  { path: 'add-patient', component:  AddPatientComponent},
-  { path:'edit-patient', component: EditPatientComponent},
-  { path:'edit-invoice', component: EditInvoiceComponent},
-  {path: 'view-invoice', component: ViewInvoiceComponent},
+  
+  { path: 'edit-account', component: EditAccountComponent },
+  { path: 'dashboard', component: DoctorDashboardComponent },
+
+  { path: 'patients', component:PatientsPageComponent },
+  { path: 'add-patient', component:  AddPatientComponent },
+  { path: 'edit-patient', component: EditPatientComponent },
+  
+  { path: 'appointments', component:AppointmentsPageComponent },
+  { path: 'add-appointment', component: AddAppointmentComponent },
+  { path: 'edit-appointment', component: EditAppointmentComponent },
+  
+  { path: 'invoices', component: InvoicesComponent },
+  { path: 'edit-invoice', component: EditInvoiceComponent },
+  { path: 'view-invoice', component: ViewInvoiceComponent },
+  { path: 'add-invoice', component: AddInvoiceComponent },
 ];
 
 @NgModule({

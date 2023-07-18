@@ -34,6 +34,8 @@ import { EditPatientComponent } from './pages/edit-patient/edit-patient.componen
 import { EditInvoiceComponent } from './pages/edit-invoice/edit-invoice.component';
 import { ViewInvoiceComponent } from './pages/view-invoice/view-invoice.component';
 import { AddAppointmentComponent } from './pages/add-appointment/add-appointment.component';
+import { EditAppointmentComponent } from './pages/edit-appointment/edit-appointment.component';
+import { AddInvoiceComponent } from './pages/add-invoice/add-invoice.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { AddAppointmentComponent } from './pages/add-appointment/add-appointment
     EditPatientComponent,
     EditInvoiceComponent,
     ViewInvoiceComponent,
-    AddAppointmentComponent
+    AddAppointmentComponent,
+    EditAppointmentComponent,
+    AddInvoiceComponent
 
   ],
   imports: [
