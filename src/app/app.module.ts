@@ -43,6 +43,11 @@ import { AssetsComponent } from './pages/assets/assets.component';
 import { AddAssetsComponent } from './pages/add-assets/add-assets.component';
 import { EditAssetsComponent } from './pages/edit-assets/edit-assets.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
+import { MyProfileComponent } from './pages/my-profile/my-profile.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
+import { AddBlogComponent } from './pages/add-blog/add-blog.component';
+import { EditBlogComponent } from './pages/edit-blog/edit-blog.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +86,12 @@ import { EditProfileComponent } from './pages/edit-profile/edit-profile.componen
     AssetsComponent,
     AddAssetsComponent,
     EditAssetsComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    MyProfileComponent,
+    BlogComponent,
+    BlogDetailsComponent,
+    AddBlogComponent,
+    EditBlogComponent
 
   ],
   imports: [
