@@ -26,6 +26,7 @@ import { ChatComponent } from './pages/chat/chat.component';
 import { AssetsComponent } from './pages/assets/assets.component';
 import { AddAssetsComponent } from './pages/add-assets/add-assets.component';
 import { EditAssetsComponent } from './pages/edit-assets/edit-assets.component';
+import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -60,6 +61,8 @@ const routes: Routes = [
   { path: 'assets', component:AssetsComponent },
   { path: 'edit-assets', component:EditAssetsComponent },
   { path: 'add-assets', component:AddAssetsComponent },
+
+  {path:'edit-profile', component:EditProfileComponent},
 
 
 ];

@@ -42,6 +42,7 @@ import { ChatProfileComponent } from './components/chat-profile/chat-profile.com
 import { AssetsComponent } from './pages/assets/assets.component';
 import { AddAssetsComponent } from './pages/add-assets/add-assets.component';
 import { EditAssetsComponent } from './pages/edit-assets/edit-assets.component';
+import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { EditAssetsComponent } from './pages/edit-assets/edit-assets.component';
     ChatProfileComponent,
     AssetsComponent,
     AddAssetsComponent,
-    EditAssetsComponent
+    EditAssetsComponent,
+    EditProfileComponent
 
   ],
   imports: [
