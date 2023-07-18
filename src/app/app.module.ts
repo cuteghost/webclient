@@ -39,6 +39,9 @@ import { AddInvoiceComponent } from './pages/add-invoice/add-invoice.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { ChatSidebarComponent } from './components/chat-sidebar/chat-sidebar.component';
 import { ChatProfileComponent } from './components/chat-profile/chat-profile.component';
+import { AssetsComponent } from './pages/assets/assets.component';
+import { AddAssetsComponent } from './pages/add-assets/add-assets.component';
+import { EditAssetsComponent } from './pages/edit-assets/edit-assets.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +76,10 @@ import { ChatProfileComponent } from './components/chat-profile/chat-profile.com
     AddInvoiceComponent,
     ChatComponent,
     ChatSidebarComponent,
-    ChatProfileComponent
+    ChatProfileComponent,
+    AssetsComponent,
+    AddAssetsComponent,
+    EditAssetsComponent
 
   ],
   imports: [
