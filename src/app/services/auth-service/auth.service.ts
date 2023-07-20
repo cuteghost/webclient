@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs/operators';
+import { tap, catchError, map } from 'rxjs/operators';
+import { of, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,18 +27,16 @@ export class AuthService {
     );
   }
 
-  isLoggedIn(): boolean {
-    this.checkAuthentication().subscribe({
-      next: (res) => {
-        this.isLoggedInValue = true;
-      },
-      error: (err) => {
-        const errorMessage = 'Session expired';
+  isLoggedIn(): Observable<boolean> {
+    return this.checkAuthentication().pipe(
+      map(() => true),
+      catchError((error) => {
+        console.log(error);
         this.isLoggedInValue = false;
         localStorage.removeItem('authToken');
-      }
-    });
-    return this.isLoggedInValue;
+        return of(false);
+      })
+    );
   }
 
   checkAuthentication() {
