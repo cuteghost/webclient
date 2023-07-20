@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './services/auth-guard/auth-guard.service';
 
-import { LoginComponent } from './components/login/login.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { EditAccountComponent } from './components/edit-account/edit-account.component';
+
+import { LoginComponent } from './pages/login/login.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { EditAccountComponent } from './pages/edit-account/edit-account.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -45,35 +47,35 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'price', component: PriceComponent },
   
-  { path: 'edit-account', component: EditAccountComponent },
-  { path: 'dashboard', component: DoctorDashboardComponent },
+  { path: 'edit-account', component: EditAccountComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DoctorDashboardComponent, canActivate: [AuthGuard] },
 
-  { path: 'patients', component:PatientsPageComponent },
-  { path: 'add-patient', component:  AddPatientComponent },
-  { path: 'edit-patient', component: EditPatientComponent },
+  { path: 'patients', component:PatientsPageComponent, canActivate: [AuthGuard] },
+  { path: 'add-patient', component:  AddPatientComponent, canActivate: [AuthGuard] },
+  { path: 'edit-patient', component: EditPatientComponent, canActivate: [AuthGuard] },
   
-  { path: 'appointments', component:AppointmentsPageComponent },
-  { path: 'add-appointment', component: AddAppointmentComponent },
-  { path: 'edit-appointment', component: EditAppointmentComponent },
+  { path: 'appointments', component:AppointmentsPageComponent, canActivate: [AuthGuard] },
+  { path: 'add-appointment', component: AddAppointmentComponent, canActivate: [AuthGuard] },
+  { path: 'edit-appointment', component: EditAppointmentComponent, canActivate: [AuthGuard] },
   
-  { path: 'invoices', component: InvoicesComponent },
-  { path: 'edit-invoice', component: EditInvoiceComponent },
-  { path: 'view-invoice', component: ViewInvoiceComponent },
-  { path: 'add-invoice', component: AddInvoiceComponent },
+  { path: 'invoices', component: InvoicesComponent, canActivate: [AuthGuard] },
+  { path: 'edit-invoice', component: EditInvoiceComponent, canActivate: [AuthGuard] },
+  { path: 'view-invoice', component: ViewInvoiceComponent, canActivate: [AuthGuard] },
+  { path: 'add-invoice', component: AddInvoiceComponent, canActivate: [AuthGuard] },
 
-  { path: 'chat', component:ChatComponent },
+  { path: 'chat', component:ChatComponent, canActivate: [AuthGuard] },
 
-  { path: 'assets', component:AssetsComponent },
-  { path: 'edit-asset', component:EditAssetsComponent },
-  { path: 'add-asset', component:AddAssetsComponent },
+  { path: 'assets', component:AssetsComponent, canActivate: [AuthGuard] },
+  { path: 'edit-asset', component:EditAssetsComponent, canActivate: [AuthGuard] },
+  { path: 'add-asset', component:AddAssetsComponent, canActivate: [AuthGuard] },
 
-  {path:'edit-profile', component:EditProfileComponent},
-  {path:'my-profile', component:MyProfileComponent},
+  { path:'edit-profile', component:EditProfileComponent, canActivate: [AuthGuard] },
+  { path:'my-profile', component:MyProfileComponent, canActivate: [AuthGuard] },
 
-  {path:'blog', component:BlogComponent},
-  {path:'blog-details', component:BlogDetailsComponent},
-  {path:'add-blog', component:AddBlogComponent},
-  {path:'edit-blog', component:EditBlogComponent},
+  { path:'blog', component:BlogComponent, canActivate: [AuthGuard] },
+  { path:'blog-details', component:BlogDetailsComponent, canActivate: [AuthGuard] },
+  { path:'add-blog', component:AddBlogComponent, canActivate: [AuthGuard] },
+  { path:'edit-blog', component:EditBlogComponent, canActivate: [AuthGuard] },
 
 
 ];

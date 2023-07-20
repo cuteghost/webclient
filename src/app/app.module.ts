@@ -8,11 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { EditAccountComponent } from './components/edit-account/edit-account.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { EditAccountComponent } from './pages/edit-account/edit-account.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -55,7 +54,6 @@ import { EditBlogComponent } from './pages/edit-blog/edit-blog.component';
     LoginComponent,
     ForgotPasswordComponent,
     SignupComponent,
-    DashboardComponent,
     EditAccountComponent,
     AppointmentComponent,
     TopbarComponent,
