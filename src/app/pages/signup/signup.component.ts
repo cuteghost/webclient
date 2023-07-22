@@ -13,7 +13,7 @@ export class SignupComponent {
   birthDate: string = '';
   jmbg: string = '';
   gender: string = '';
-  address: string = '';
+  adress: string = '';
   telephone: string = '';
   email: string = '';
   password: string = '';
@@ -27,7 +27,7 @@ export class SignupComponent {
       birthDate: this.birthDate,      
       jmbg: this.jmbg,      
       gender: this.gender === 'Male' ? 0 : 1,      
-      address: this.address,      
+      adress: this.adress,      
       telephone: this.telephone,      
       email: this.email,      
       password: this.password    

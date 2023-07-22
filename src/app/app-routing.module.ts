@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './services/auth-guard/auth-guard.service';
+import { LoginGuard } from './services/login-guard/login-guard.service';
 
 
 import { LoginComponent } from './pages/login/login.component';
@@ -41,11 +42,11 @@ const routes: Routes = [
   { path: 'service', component: ServiceComponent },
   { path: 'about', component: AboutComponent },
   { path: 'appointment', component: AppointmentComponent },
+  { path: 'price', component: PriceComponent },
   
   { path: 'forgot-password', component: ForgotPasswordComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
   { path: 'signup', component: SignupComponent },
-  { path: 'price', component: PriceComponent },
   
   { path: 'edit-account', component: EditAccountComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', component: DoctorDashboardComponent, canActivate: [AuthGuard] },
