@@ -47,6 +47,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
 import { AddBlogComponent } from './pages/add-blog/add-blog.component';
 import { EditBlogComponent } from './pages/edit-blog/edit-blog.component';
+import { AddDoctorComponent } from './pages/add-doctor/add-doctor.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { EditBlogComponent } from './pages/edit-blog/edit-blog.component';
     BlogComponent,
     BlogDetailsComponent,
     AddBlogComponent,
-    EditBlogComponent
+    EditBlogComponent,
+    AddDoctorComponent
 
   ],
   imports: [

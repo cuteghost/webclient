@@ -21,6 +21,7 @@ export class SignupComponent {
   constructor(private authService: AuthService) { }
 
   signup() {
+    console.log("test");
     const userObj = {
       firstName: this.firstName,      
       lastName: this.lastName,      
