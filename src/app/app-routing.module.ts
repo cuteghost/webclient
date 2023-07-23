@@ -35,6 +35,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
 import { AddBlogComponent } from './pages/add-blog/add-blog.component';
 import { EditBlogComponent } from './pages/edit-blog/edit-blog.component';
+import { AddDoctorComponent } from './pages/add-doctor/add-doctor.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -77,6 +78,8 @@ const routes: Routes = [
   { path:'blog-details', component:BlogDetailsComponent, canActivate: [AuthGuard] },
   { path:'add-blog', component:AddBlogComponent, canActivate: [AuthGuard] },
   { path:'edit-blog', component:EditBlogComponent, canActivate: [AuthGuard] },
+
+  {path:'add-doctor', component: AddDoctorComponent, canActivate:[AuthGuard]},
 
 
 ];

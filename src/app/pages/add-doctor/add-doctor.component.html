@@ -1,81 +1,134 @@
+<div class="main-wrapper">
+    <app-dashboard-header></app-dashboard-header>
+    <app-sidebar></app-sidebar>
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h4 class="page-title">Add Patient</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <form (ngSubmit)="addDoctor()">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="firstName">First Name <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" name="firstName" [(ngModel)]="firstName" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" name="lastName" [(ngModel)]="lastName" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="jmbg">JMBG <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" name="jmbg" [(ngModel)]="jmbg" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="email">Email <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="email" name="email" [(ngModel)]="email" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label  for="password">Password <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="password" name="password" [(ngModel)]="password" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="birthDate">Date of Birth <span class="text-danger">*</span></label>
+                                    <div class="cal-icon">
+                                        <input type="date" class="form-control datetimepicker" name="birthDate" [(ngModel)]="birthDate" required>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-sm-6">
+                                <div class="form-group gender-select">
+                                    <label class="gen-label" for="gender">Gender: <span class="text-danger">*</span></label>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label"  for="male">
+                                            <input type="radio" name="gender" class="form-check-input" name="male" [(ngModel)]="gender" required>Male
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label"  for="female">
+                                            <input type="radio" name="gender" class="form-check-input" name="female" [(ngModel)]="gender" required>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="birthDate">Joined Date: <span class="text-danger">*</span></label>
+                                    <div class="cal-icon">
+                                        <input type="date" class="form-control datetimepicker" name="joinedDate" [(ngModel)]="joinedDate" required>
+                                    </div>
+                                </div>
+                            </div>
 
-<app-topbar></app-topbar>
-<app-page-navbar></app-page-navbar>
-
-<br><br><br><br><br><br><!-- ignoriraj ovaj amaterizam -->
-
-
-  <!-- Signup Start -->
-
-<div class="wrapper fadeInDown">
-    <h2>Add Staff</h2>
-    <form class="form-container">
-      <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" required><br>
-      
-      <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" required><br>
-      
-      <label for="birthDate">Birth Date:</label>
-      <input type="date" id="birthDate" name="birthDate" [(ngModel)]="birthDate" required><br>
-      
-      <label for="jmbg">JMBG:</label>
-      <input type="text" id="jmbg" name="jmbg" [(ngModel)]="jmbg" required><br>
-      
-      <label for="gender">Gender:</label>
-      <select id="gender" name="gender" [(ngModel)]="gender" required><br>
-        <option value="">Select</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select><br/>
-      
-      <label for="address">Address:</label>
-      <textarea id="address" name="address" [(ngModel)]="address" required></textarea><br/>
-      
-      <label for="telephone">Telephone:</label>
-      <input type="tel" id="telephone" name="telephone" [(ngModel)]="telephone" required><br/>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="email" required><br/>
-      
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" [(ngModel)]="password" required>
-      
-      <button id="dugme" type="submit">Sign up</button>
-      <p>.</p>
-      
-
-    </form>
-  
-    <div>
-     <p>Already have an account? <a routerLink="/signin">Sign In </a></p><br>
-   <p>Forgot your password?<a routerLink="/forgot-password">Forgot Password</a></p>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="adress">Certification: <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control " name="certification" [(ngModel)]="certification" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="adress">Education: <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control " name="education" [(ngModel)]="education" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="adress">Languages: <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control " name="languages" [(ngModel)]="languages" required>
+                                </div>
+                            </div>
+                            <!-- <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Avatar</label>
+                                    <div class="profile-upload">
+                                        <div class="upload-img">
+                                            <img alt="" src="assets/img/user.jpg">
+                                        </div>
+                                        <div class="upload-input">
+                                            <input type="file" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- <div class="form-group">
+                            <label class="display-block">Status</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status" id="patient_active" value="option1" checked>
+                                <label class="form-check-label" for="patient_active">
+                                Active
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status" id="patient_inactive" value="option2">
+                                <label class="form-check-label" for="patient_inactive">
+                                Inactive
+                                </label>
+                            </div>
+                        </div> -->
+                        <div class="m-t-20 text-center">
+                            <button class="btn btn-primary submit-btn" type="submit">Create Doctor</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <!-- Signup End -->
-  <!-- Newsletter Start -->
-<div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
-  <div class="container">
-      
-  </div>
 </div>
-
-<!-- Newsletter End -->
-<app-page-footer></app-page-footer>
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./../../../assets/lib/wow/wow.min.js"></script>
-<script src="./../../../assets/lib/easing/easing.min.js"></script>
-<script src="./../../../assets/lib/waypoints/waypoints.min.js"></script>
-<script src="./../../../assets/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="./../../../assets/lib/tempusdominus/js/moment.min.js"></script>
-<script src="./../../../assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="./../../../assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="./../../../assets/lib/twentytwenty/jquery.event.move.js"></script>
-<script src="./../../../assets/lib/twentytwenty/jquery.twentytwenty.js"></script>
-<script src="./../../../assets/js/jquery-3.2.1.min.js"></script>
-<!-- Template Javascript -->
-<script src="./../../../assets/js/main.js"></script>
+<app-messages-sidebar></app-messages-sidebar>
