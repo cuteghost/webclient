@@ -12,6 +12,11 @@
               <i class="fa fa-plus"></i> Add Patient
             </a>
           </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search patients by name" [(ngModel)]="searchTerm" (ngModelChange)="filterPatients()">
+            </div>
+          </div>          
         </div>
         <div class="row">
           <div class="col-md-12">
@@ -28,7 +33,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let patient of patients">
+                  <tr *ngFor="let patient of filteredPatients" (click)="navigateToPatient(patient.id)">
                     <td>
                       <img width="28" height="28" src="assets/img/user.jpg" class="rounded-circle m-r-5" alt="">
                       {{ patient.firstName + " " + patient.lastName }}

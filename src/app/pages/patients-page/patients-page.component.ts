@@ -9,6 +9,8 @@ import { PatientService } from '../../services/patient.service';
 })
 export class PatientsPageComponent implements OnInit {
   patients: any[]= []; // Assuming the patients array contains patient objects with name, age, address, phone, and email properties
+  filteredPatients: any[] = []; // Contains filtered patients
+  searchTerm: string = ''; // Holds the value of the search input
 
   constructor(private router: Router, private patientService: PatientService) {}
 
@@ -20,13 +22,26 @@ export class PatientsPageComponent implements OnInit {
     this.patientService.getPatients().subscribe(
       (patients) => {
         this.patients = patients;
+        this.filteredPatients = patients; // Set filteredPatients to the initial list of patients
       },
       (error) => {
         console.error(error);
       }
     );
   }
-  
+  filterPatients(): void {
+    if (this.searchTerm.trim() === '') {
+      // If the search term is empty, show all patients
+      this.filteredPatients = this.patients;
+    } else {
+      // If the search term is not empty, filter patients by their name
+      this.filteredPatients = this.patients.filter((patient: any) => {
+        const fullName = patient.firstName + ' ' + patient.lastName;
+        return fullName.toLowerCase().includes(this.searchTerm.toLowerCase());
+      });
+    }
+  }
+
   calculateAge(birthDate: string): number {
     // Parse the birthDate into a Date object
     const birthDateObj = new Date(birthDate);
@@ -43,5 +58,9 @@ export class PatientsPageComponent implements OnInit {
     // Round the age to a whole number
     return Math.floor(age);
   }
-  // Implement edit and delete logic here based on your requirements
+  navigateToPatient(patientId: number): void {
+    // Navigate to the patient page with the patient's ID
+    this.router.navigate(['/patient', patientId]);
+  }
+  
 }
