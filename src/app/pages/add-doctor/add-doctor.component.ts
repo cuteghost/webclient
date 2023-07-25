@@ -38,7 +38,7 @@ export class AddDoctorComponent implements OnInit {
       education: this.education,
       languages: this.languages
     }
-    this.authService.signUp(userObj).subscribe(
+    this.authService.createStaff(userObj).subscribe(
       response => {
         console.log(response);
       },

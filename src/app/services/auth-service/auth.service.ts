@@ -58,4 +58,10 @@ export class AuthService {
     this.isLoggedInValue = false;
     // Perform any additional cleanup or logout actions here
   }
+  createStaff(userObj: any): Observable<any> {
+    const apiUrl = 'https://localhost:7179/api/Staff/create';
+    const headers = this.getHeaders();
+    return this.http.post<any>(apiUrl, userObj, { headers });
+
+  }
 }
