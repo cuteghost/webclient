@@ -1,0 +1,19 @@
+---
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - IMAGE_TAG="$(echo ${CODEBUILD_RESOLVED_SOURCE_VERSION} | shasum | head -c 8)"
+      - aws ecr get-login-password|docker login -u AWS --password-stdin "$ECR_REPOSITORY_URI"
+  build:
+    commands:
+      - docker build -t ${ECR_REPOSITORY_URI}:latest -f Dockerfile .
+      - docker tag ${ECR_REPOSITORY_URI}:latest ${ECR_REPOSITORY_URI}:${IMAGE_TAG}
+  post_build:
+    commands:
+      - docker push --disable-content-trust ${ECR_REPOSITORY_URI}:latest
+      - docker push --disable-content-trust "$ECR_REPOSITORY_URI:$IMAGE_TAG"
+      - printf '[{"name":"app","imageUri":"%s"}]' "${ECR_REPOSITORY_URI}:${IMAGE_TAG}" > imagedefinitions.json
+artifacts:
+  files:
+    - imagedefinitions.json
