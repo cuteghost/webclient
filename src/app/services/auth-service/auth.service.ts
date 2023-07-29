@@ -2,22 +2,23 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { tap, catchError, map } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl: string = "https://localhost:7179/User/Auth";
+  private baseUrl: string = environment.apiUrl;
   private isLoggedInValue: boolean = false;
 
   constructor(private http: HttpClient) { }
 
   signUp(userObj: any) {
-    return this.http.post<any>(`${this.baseUrl}/Register/patient`, userObj);
+    return this.http.post<any>(`${this.baseUrl}/User/Auth//Register/patient`, userObj);
   }
 
   login(loginObj: any) {
-    return this.http.post<any>(`${this.baseUrl}/Login`, loginObj).pipe(
+    return this.http.post<any>(`${this.baseUrl}/User/Auth/Login`, loginObj).pipe(
       tap((res) => {
         // Store the token in localStorage
         localStorage.setItem('authToken', `Bearer ${res.token}`);
@@ -41,7 +42,7 @@ export class AuthService {
 
   checkAuthentication() {
     const headers = this.getHeaders();
-    return this.http.get(`${this.baseUrl}/CheckAuthentication`, { headers });
+    return this.http.get(`${this.baseUrl}/User/Auth/CheckAuthentication`, { headers });
   }
 
   getHeaders(): HttpHeaders {
@@ -59,7 +60,7 @@ export class AuthService {
     // Perform any additional cleanup or logout actions here
   }
   createStaff(userObj: any): Observable<any> {
-    const apiUrl = 'https://localhost:7179/api/Staff/create';
+    const apiUrl = `${this.baseUrl}/api/Staff/create`;
     const headers = this.getHeaders();
     return this.http.post<any>(apiUrl, userObj, { headers });
 
