@@ -37,6 +37,11 @@ import { AddBlogComponent } from './pages/add-blog/add-blog.component';
 import { EditBlogComponent } from './pages/edit-blog/edit-blog.component';
 import { AddDoctorComponent } from './pages/add-doctor/add-doctor.component';
 import { DoctorsComponent } from './pages/doctors/doctors.component';
+import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
+import { PatientAppointmentsComponent } from './pages/patient-appointments/patient-appointments.component';
+import { PatientInvoicesComponent } from './pages/patient-invoices/patient-invoices.component';
+import { PatientBlogsComponent } from './pages/patient-blogs/patient-blogs.component';
+import { PatientDoctorsComponent } from './pages/patient-doctors/patient-doctors.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -57,11 +62,11 @@ const routes: Routes = [
   { path: 'add-patient', component:  AddPatientComponent, canActivate: [AuthGuard] },
   { path: 'edit-patient', component: EditPatientComponent, canActivate: [AuthGuard] },
   
-  { path: 'appointments', component:AppointmentsPageComponent, canActivate: [AuthGuard] },
+  { path: 'appointments', component:AppointmentsPageComponent },
   { path: 'add-appointment', component: AddAppointmentComponent, canActivate: [AuthGuard] },
   { path: 'edit-appointment', component: EditAppointmentComponent, canActivate: [AuthGuard] },
   
-  { path: 'invoices', component: InvoicesComponent, canActivate: [AuthGuard] },
+  { path: 'invoices', component: InvoicesComponent},
   { path: 'edit-invoice', component: EditInvoiceComponent, canActivate: [AuthGuard] },
   { path: 'view-invoice', component: ViewInvoiceComponent, canActivate: [AuthGuard] },
   { path: 'add-invoice', component: AddInvoiceComponent, canActivate: [AuthGuard] },
@@ -75,13 +80,19 @@ const routes: Routes = [
   { path:'edit-profile', component:EditProfileComponent, canActivate: [AuthGuard] },
   { path:'my-profile', component:MyProfileComponent, canActivate: [AuthGuard] },
 
-  { path:'blog', component:BlogComponent, canActivate: [AuthGuard] },
-  { path:'blog-details', component:BlogDetailsComponent, canActivate: [AuthGuard] },
-  { path:'add-blog', component:AddBlogComponent, canActivate: [AuthGuard] },
-  { path:'edit-blog', component:EditBlogComponent, canActivate: [AuthGuard] },
+  { path:'blog', component:BlogComponent, canActivate:[AuthGuard] },
+  { path:'blog-details', component:BlogDetailsComponent, canActivate:[AuthGuard] },
+  { path:'add-blog', component:AddBlogComponent, canActivate:[AuthGuard] },
+  { path:'edit-blog', component:EditBlogComponent, canActivate:[AuthGuard]},
 
   {path:'add-doctor', component: AddDoctorComponent, canActivate:[AuthGuard]},
   {path:'doctors', component:DoctorsComponent, canActivate:[AuthGuard]},
+
+  {path:'patient-dashboard', component:PatientDashboardComponent, canActivate:[AuthGuard]},
+  {path:'patient-appointments', component:PatientAppointmentsComponent, canActivate:[AuthGuard]},
+  {path:'patient-invoices', component:PatientInvoicesComponent, canActivate:[AuthGuard]},
+  {path:'patient-blogs', component:PatientBlogsComponent, canActivate:[AuthGuard]},
+  {path:'patient-doctors', component:PatientDoctorsComponent, canActivate:[AuthGuard]},
 
 
 ];

@@ -22,6 +22,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PriceComponent } from './pages/price/price.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { DoctorDashboardComponent } from './pages/doctor-dashboard/doctor-dashboard.component';
+import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
+import { PatientSidebarComponent } from './components/patient-sidebar/patient-sidebar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardHeaderComponent } from './components/dashboard-header/dashboard-header.component';
 import { MessagesSidebarComponent } from './components/messages-sidebar/messages-sidebar.component';
@@ -49,6 +51,11 @@ import { AddBlogComponent } from './pages/add-blog/add-blog.component';
 import { EditBlogComponent } from './pages/edit-blog/edit-blog.component';
 import { AddDoctorComponent } from './pages/add-doctor/add-doctor.component';
 import { DoctorsComponent } from './pages/doctors/doctors.component';
+import { PatientAppointmentsComponent } from './pages/patient-appointments/patient-appointments.component';
+import { PatientInvoicesComponent } from './pages/patient-invoices/patient-invoices.component';
+import { PatientDoctorsComponent } from './pages/patient-doctors/patient-doctors.component';
+import { PatientBlogsComponent } from './pages/patient-blogs/patient-blogs.component';
+
 
 @NgModule({
   declarations: [
@@ -93,7 +100,13 @@ import { DoctorsComponent } from './pages/doctors/doctors.component';
     AddBlogComponent,
     EditBlogComponent,
     AddDoctorComponent,
-    DoctorsComponent
+    DoctorsComponent,
+    PatientDashboardComponent,
+    PatientSidebarComponent,
+    PatientAppointmentsComponent,
+    PatientInvoicesComponent,
+    PatientDoctorsComponent,
+    PatientBlogsComponent
 
   ],
   imports: [
