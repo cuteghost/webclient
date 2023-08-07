@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; // Import the HttpClientModule
 import { ReactiveFormsModule } from '@angular/forms';
+import { JwtModule, JwtHelperService } from '@auth0/angular-jwt'; // Import JwtModule and JwtHelperService
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -115,9 +116,16 @@ import { PatientBlogsComponent } from './pages/patient-blogs/patient-blogs.compo
     FormsModule,
     RouterModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => {
+          return localStorage.getItem('authToken'); // Change this if you store the token with a different key
+        }
+      }
+    })
   ],
-  providers: [],
+  providers: [JwtHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

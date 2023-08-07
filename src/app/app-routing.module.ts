@@ -88,11 +88,11 @@ const routes: Routes = [
   {path:'add-doctor', component: AddDoctorComponent, canActivate:[AuthGuard]},
   {path:'doctors', component:DoctorsComponent, canActivate:[AuthGuard]},
 
-  {path:'patient-dashboard', component:PatientDashboardComponent},
-  {path:'patient-appointments', component:PatientAppointmentsComponent},
-  {path:'patient-invoices', component:PatientInvoicesComponent},
-  {path:'patient-blogs', component:PatientBlogsComponent},
-  {path:'patient-doctors', component:PatientDoctorsComponent},
+  {path:'patient-dashboard', component:PatientDashboardComponent, canActivate:[AuthGuard] },
+  {path:'patient-appointments', component:PatientAppointmentsComponent, canActivate:[AuthGuard] },
+  {path:'patient-invoices', component:PatientInvoicesComponent, canActivate:[AuthGuard] },
+  {path:'patient-blogs', component:PatientBlogsComponent, canActivate:[AuthGuard] },
+  {path:'patient-doctors', component:PatientDoctorsComponent, canActivate:[AuthGuard] },
 
 
 ];

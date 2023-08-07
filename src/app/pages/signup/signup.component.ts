@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { error } from 'console';
 import { AuthService } from 'src/app/services/auth-service/auth.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -18,7 +18,7 @@ export class SignupComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   signup() {
     console.log("test");
@@ -34,8 +34,9 @@ export class SignupComponent {
       password: this.password    
     }
     this.authService.signUp(userObj).subscribe(
-      response => {
+      (response) => {
         console.log(response);
+        this.router.navigate(['/login']);
       },
       error => {
         console.error('Sign-up Error', error)
