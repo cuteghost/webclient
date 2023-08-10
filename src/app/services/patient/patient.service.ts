@@ -13,6 +13,6 @@ export class PatientService {
 
   getPatients(): Observable<any[]> {
     const headers = this.authService.getHeaders();
-    return this.http.get<any[]>(`${this.baseUrl}/api/Patient/all`, { headers });
+    return this.http.get<any[]>(`${this.baseUrl}api/Patient/all`, { headers });
   }
 }
