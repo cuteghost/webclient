@@ -24,6 +24,7 @@
               <table class="table table-border table-striped custom-table datatable mb-0">
                 <thead>
                   <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Age</th>
                     <th>Address</th>
@@ -34,6 +35,7 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let patient of filteredPatients" (click)="navigateToPatient(patient.id)">
+                    <td>{{patient.id}}</td>
                     <td>
                       <img width="28" height="28" src="assets/img/user.jpg" class="rounded-circle m-r-5" alt="">
                       {{ patient.firstName + " " + patient.lastName }}

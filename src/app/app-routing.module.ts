@@ -42,6 +42,8 @@ import { PatientAppointmentsComponent } from './pages/patient-appointments/patie
 import { PatientInvoicesComponent } from './pages/patient-invoices/patient-invoices.component';
 import { PatientBlogsComponent } from './pages/patient-blogs/patient-blogs.component';
 import { PatientDoctorsComponent } from './pages/patient-doctors/patient-doctors.component';
+import { PatientEditAppointmentComponent } from './pages/patient-edit-appointment/patient-edit-appointment.component';
+import { PatientAddAppointmentComponent } from './pages/patient-add-appointment/patient-add-appointment.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -94,6 +96,8 @@ const routes: Routes = [
   {path:'patient-blogs', component:PatientBlogsComponent, canActivate:[AuthGuard] },
   {path:'patient-doctors', component:PatientDoctorsComponent, canActivate:[AuthGuard] },
 
+  {path:'patient-edit-appointment', component:PatientEditAppointmentComponent, canActivate:[AuthGuard]},
+  {path:'patient-add-appointment', component:PatientAddAppointmentComponent, canActivate:[AuthGuard]},
 
 ];
 
