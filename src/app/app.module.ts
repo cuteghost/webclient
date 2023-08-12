@@ -58,6 +58,7 @@ import { PatientDoctorsComponent } from './pages/patient-doctors/patient-doctors
 import { PatientBlogsComponent } from './pages/patient-blogs/patient-blogs.component';
 import { PatientEditAppointmentComponent } from './pages/patient-edit-appointment/patient-edit-appointment.component';
 import { PatientAddAppointmentComponent } from './pages/patient-add-appointment/patient-add-appointment.component';
+import { StaffAppointmentsComponent } from './pages/staff-appointments/staff-appointments.component';
 
 
 @NgModule({
@@ -111,7 +112,8 @@ import { PatientAddAppointmentComponent } from './pages/patient-add-appointment/
     PatientDoctorsComponent,
     PatientBlogsComponent,
     PatientEditAppointmentComponent,
-    PatientAddAppointmentComponent
+    PatientAddAppointmentComponent,
+    StaffAppointmentsComponent
 
   ],
   imports: [

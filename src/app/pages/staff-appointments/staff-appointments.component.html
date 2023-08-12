@@ -1,6 +1,6 @@
 <div class="main-wrapper">
     <app-dashboard-header></app-dashboard-header>
-    <app-patient-sidebar></app-patient-sidebar>
+    <app-sidebar></app-sidebar>
     <div class="page-wrapper">
         <div class="content">
             <div class="row">
@@ -8,7 +8,7 @@
                     <h4 class="page-title">Appointments</h4>
                 </div>
                 <div class="col-sm-8 col-9 text-right m-b-20">
-                    <a href="/patient-add-appointment" class="btn btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Appointment</a>
+                    <a href="/staff-add-appointment" class="btn btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Appointment</a>
                 </div>
             </div>
             <div class="row">
@@ -18,7 +18,7 @@
                             <thead>
                                 <tr>
                                     <th>Appointment ID</th>
-                                    <th>Doctor Name</th>
+                                    <th>Patient Name</th>
                                     <th>Appointment Date</th>
                                     <th>Status</th>
                                     <th class="text-right">Action</th>
@@ -27,15 +27,16 @@
                             <tbody>
                                 <tr *ngFor="let appointment of filteredAppointments">
                                     <td>APT{{appointment.id}}</td>
-                                    <td>{{ appointment.name}}</td>
+                                    <td>{{ appointment.patientName}}</td>
                                     <td>{{ appointment.date | date:'yyyy-MM-dd HH:mm'}}</td>
                                     <td>{{ appointment.appointmentStatus }}</td>
                                     <td class="text-right">
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="/patient-edit-appointment"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                <a class="dropdown-item" href="/staff-edit-appointment"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_appointment"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#change_status" (click)="onOpenChangeStatusModal(appointment.id)"><i class="fa fa-check-square-o m-r-5"></i> Change Status</a>
                                             </div>
                                         </div>
                                     </td>
@@ -47,5 +48,32 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="change_status" tabindex="-1" role="dialog" aria-labelledby="changeStatusLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="changeStatusLabel">Change Appointment Status</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Select the new status for the appointment:</p>
+                        <select class="form-control" id="statusSelect">
+                            <option value="Approved">Approved</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Declined">Declined</option>
+                            <option value="Done">Done</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="saveStatusBtn" data-dismiss="modal" (click)="onSaveStatusClick()">Save changes</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
         <app-messages-sidebar></app-messages-sidebar>
     </div> 
+    

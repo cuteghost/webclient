@@ -44,6 +44,7 @@ import { PatientBlogsComponent } from './pages/patient-blogs/patient-blogs.compo
 import { PatientDoctorsComponent } from './pages/patient-doctors/patient-doctors.component';
 import { PatientEditAppointmentComponent } from './pages/patient-edit-appointment/patient-edit-appointment.component';
 import { PatientAddAppointmentComponent } from './pages/patient-add-appointment/patient-add-appointment.component';
+import { StaffAppointmentsComponent } from './pages/staff-appointments/staff-appointments.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -98,6 +99,7 @@ const routes: Routes = [
 
   {path:'patient-edit-appointment', component:PatientEditAppointmentComponent, canActivate:[AuthGuard]},
   {path:'patient-add-appointment', component:PatientAddAppointmentComponent, canActivate:[AuthGuard]},
+  {path: 'staff-appointments', component: StaffAppointmentsComponent, canActivate:[AuthGuard]},
 
 ];
 
