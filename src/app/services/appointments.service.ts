@@ -28,5 +28,15 @@ export class AppointmentsService {
     };
     return this.http.patch(`${this.baseUrl}api/Appointment/change-status`, requestBody, { headers });
   }
+
+  getPatients(): Observable<any[]> {
+    const headers = this.authService.getHeaders();
+    return this.http.get<any[]>(`${this.baseUrl}api/Patient/all`, { headers }); // Adjust the endpoint
+  }
+
+  getDoctors(): Observable<any[]> {
+    const headers = this.authService.getHeaders();
+    return this.http.get<any[]>(`${this.baseUrl}api/Staff/get-all`, { headers }); // Adjust the endpoint
+  }
   
 }
