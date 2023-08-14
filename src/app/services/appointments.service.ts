@@ -31,12 +31,20 @@ export class AppointmentsService {
 
   getPatients(): Observable<any[]> {
     const headers = this.authService.getHeaders();
-    return this.http.get<any[]>(`${this.baseUrl}api/Patient/all`, { headers }); // Adjust the endpoint
+    return this.http.get<any[]>(`${this.baseUrl}api/Patient/all`, { headers }); 
   }
 
   getDoctors(): Observable<any[]> {
     const headers = this.authService.getHeaders();
-    return this.http.get<any[]>(`${this.baseUrl}api/Staff/get-all`, { headers }); // Adjust the endpoint
+    return this.http.get<any[]>(`${this.baseUrl}api/Staff/get-all`, { headers });
   }
-  
+
+  updateAppointment(editedAppointment: any): Observable<any> {
+    const headers = this.authService.getHeaders();
+    return this.http.patch(`${this.baseUrl}api/Appointment`, editedAppointment, { headers });
+  }
+  deleteAppointment(appointmentId: any): Observable<any> {
+    const headers = this.authService.getHeaders();
+    return this.http.delete(`${this.baseUrl}api/Appointment/delete/${appointmentId}`, { headers })
+  }
 }

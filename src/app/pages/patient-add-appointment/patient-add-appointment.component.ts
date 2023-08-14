@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./patient-add-appointment.component.scss']
 })
 export class PatientAddAppointmentComponent implements OnInit {
-  appointmentData: any = {}; 
+  appointmentData: any = {};
 
   constructor(private router: Router, private AppointmentsService: AppointmentsService) { }
 
@@ -18,12 +18,12 @@ export class PatientAddAppointmentComponent implements OnInit {
       .subscribe(
         (response) => {
           this.router.navigate(['/patient-appointments']);
-         
+
         },
         (error) => {
           this.router.navigate(['/patient-appointments']);
         }
       );
-}
+  }
 }
 
