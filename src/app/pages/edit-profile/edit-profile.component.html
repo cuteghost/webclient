@@ -2,399 +2,210 @@
     <app-dashboard-header></app-dashboard-header>
     <app-sidebar></app-sidebar>
     <div class="page-wrapper">
-    <div class="content">
-        <div class="row">
-            <div class="col-sm-12">
-                <h4 class="page-title">Edit Profile</h4>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="page-title">Edit Profile</h4>
+                </div>
             </div>
-        </div>
-        <form>
-            <div class="card-box">
-                <h3 class="card-title">Basic Informations</h3>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="profile-img-wrap">
-                            <img class="inline-block" src="assets/img/user.jpg" alt="user">
-                            <div class="fileupload btn">
-                                <span class="btn-text">edit</span>
-                                <input class="upload" type="file">
+            <form>
+                <div class="card-box">
+                    <h3 class="card-title">Basic Informations</h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="profile-img-wrap">
+                                <img class="inline-block" src="assets/img/user.jpg" alt="user">
+                                <div class="fileupload btn">
+                                    <span class="btn-text">edit</span>
+                                    <input class="upload" type="file">
+                                </div>
                             </div>
-                        </div>
-                        <div class="profile-basic">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group form-focus">
-                                        <label class="focus-label">First Name</label>
-                                        <input type="text" class="form-control floating" value="John">
+                            <div class="profile-basic">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <label for="firstName">First Name</label>
+                                            <input id="firstName" type="text" class="form-control floating centered-input" name="firstName" [value]="profileData.firstName">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group form-focus">
-                                        <label class="focus-label">Last Name</label>
-                                        <input type="text" class="form-control floating" value="Doe">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group form-focus">
-                                        <label class="focus-label">Birth Date</label>
-                                        <div class="cal-icon">
-                                            <input class="form-control floating datetimepicker" type="text" value="05/06/1985">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <label for="lastName">Last Name</label>
+                                            <input id="lastName" type="text" class="form-control floating centered-input" name="lastName" [value]="profileData.lastName">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group form-focus select-focus">
-                                        <label class="focus-label">Gender</label>
-                                        <select class="select form-control floating">
-                                            <option value="male selected">Male</option>
-                                            <option value="female">Female</option>
-                                        </select>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <label for="birthDate">Birth Date</label>
+                                            <input id="birthDate" class="form-control floating centered-input" type="datetime-local" name="birthDate" [value]="profileData.birthDate">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus select-focus">
+                                            <label for="gender">Gender</label>
+                                            <select id="gender" class="select form-control floating centered-input" name="gender">
+                                                <option value="0" [selected]="profileData.gender === 1">Female</option>
+                                                <option value="1" [selected]="profileData.gender === 0">Male</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <label for="jmbg">JMBG</label>
+                                            <input id="jmbg" type="text" class="form-control floating centered-input" name="jmbg" [value]="profileData.jmbg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group form-focus">
+                                            <label for="email">Email</label>
+                                            <input id="email" type="email" class="form-control floating centered-input" name="email" [value]="profileData.email">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-box">
-                <h3 class="card-title">Contact Informations</h3>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Address</label>
-                            <input type="text" class="form-control floating" value="4487 Snowbird Lane">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">State</label>
-                            <input type="text" class="form-control floating" value="New York">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Country</label>
-                            <input type="text" class="form-control floating" value="United States">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Pin Code</label>
-                            <input type="text" class="form-control floating" value="10523">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Phone Number</label>
-                            <input type="text" class="form-control floating" value="631-889-3206">
-                        </div>
-                    </div>
+                <!-- More card-box sections can be added here -->
+                <div class="text-center m-t-20">
+                    <button class="btn btn-primary submit-btn" type="button" (click)="saveProfile()">Save</button>
                 </div>
-            </div>
-            <div class="card-box">
-                <h3 class="card-title">Education Informations</h3>
+            </form>
+        </div>
+
+<!-- CHANGE PASSWORD -->
+
+        <div class="card-box">
+            <h3 class="card-title">Change Password</h3>
+            <form>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group form-focus">
-                            <label class="focus-label">Institution</label>
-                            <input type="text" class="form-control floating" value="Oxford University">
+                            <label for="oldPassword">Old Password</label>
+                            <input id="oldPassword" type="password" class="form-control floating centered-input" name="oldPassword" required [(ngModel)]="oldPassword">
                         </div>
                     </div>
+                
                     <div class="col-md-6">
                         <div class="form-group form-focus">
-                            <label class="focus-label">Subject</label>
-                            <input type="text" class="form-control floating" value="Computer Science">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Starting Date</label>
-                            <div class="cal-icon">
-                                <input type="text" class="form-control floating datetimepicker" value="01/06/2002">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Complete Date</label>
-                            <div class="cal-icon">
-                                <input type="text" class="form-control floating datetimepicker" value="31/05/2006">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Degree</label>
-                            <input type="text" class="form-control floating" value="BE Computer Science">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Grade</label>
-                            <input type="text" class="form-control floating" value="Grade A">
+                            <label for="newPassword">New Password</label>
+                            <input id="newPassword" type="password" class="form-control floating centered-input" name="newPassword" required [(ngModel)]="newPassword">
                         </div>
                     </div>
                 </div>
-                <div class="add-more">
-                    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add More Institute</a>
+                <div class="text-center m-t-20">
+                    <button class="btn btn-primary submit-btn" type="button" (click)="changePassword()">Change Password</button>
                 </div>
-            </div>
+            </form>
+        </div>
+<!-- EXPERIENCE -->
+
+        <div class="col-md-12">
             <div class="card-box">
-                <h3 class="card-title">Experience Informations</h3>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Company Name</label>
-                            <input type="text" class="form-control floating" value="Digital Devlopment Inc">
+                <h3 class="card-title">Add Experience</h3>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-focus">
+                                <label for="expTitle">Title</label>
+                                <input id="expTitle" type="text" class="form-control" name="expTitle" [(ngModel)]="newExperience.title" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Location</label>
-                            <input type="text" class="form-control floating" value="United States">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Job Position</label>
-                            <input type="text" class="form-control floating" value="Web Developer">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Period From</label>
-                            <div class="cal-icon">
-                                <input type="text" class="form-control floating datetimepicker" value="01/07/2007">
+                        <div class="col-md-6">
+                            <div class="form-group form-focus">
+                                <label for="workPlace">Work Place</label>
+                                <input id="workPlace" type="text" class="form-control" name="workPlace" [(ngModel)]="newExperience.workPlace" required>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Period To</label>
-                            <div class="cal-icon">
-                                <input type="text" class="form-control floating datetimepicker" value="08/06/2018">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-focus">
+                                <label for="expFrom">From</label>
+                                <input id="expFrom" type="date" class="form-control" name="expFrom" [(ngModel)]="newExperience.from" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-focus">
+                                <label for="expTo">To</label>
+                                <input id="expTo" type="date" class="form-control" name="expTo" [(ngModel)]="newExperience.to" required>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="add-more">
-                    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add More Experience</a>
-                </div>
-            </div>
-            <div class="text-center m-t-20">
-                <button class="btn btn-primary submit-btn" type="button">Save</button>
-            </div>
-        </form>
-    </div>
-    <div class="notification-box">
-        <div class="msg-sidebar notifications msg-noti">
-            <div class="topnav-dropdown-header">
-                <span>Messages</span>
-            </div>
-            <div class="drop-scroll msg-list-scroll" id="msg_list">
-                <ul class="list-box">
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">R</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author">Richard Miles </span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group form-focus">
+                                <label for="expLocation">Location ID</label>
+                                <input id="expLocation" type="text" class="form-control" name="expLocation" [(ngModel)]="newExperience.locationId" required>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item new-message">
-                                <div class="list-left">
-                                    <span class="avatar">J</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author">John Doe</span>
-                                    <span class="message-time">1 Aug</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">T</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author"> Tarah Shropshire </span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">M</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author">Mike Litorus</span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">C</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author"> Catherine Manseau </span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">D</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author"> Domenic Houston </span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">B</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author"> Buster Wigton </span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">R</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author"> Rolland Webber </span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">C</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author"> Claire Mapes </span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">M</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author">Melita Faucher</span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">J</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author">Jeffery Lalor</span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">L</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author">Loren Gatlin</span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="chat.html">
-                            <div class="list-item">
-                                <div class="list-left">
-                                    <span class="avatar">T</span>
-                                </div>
-                                <div class="list-body">
-                                    <span class="message-author">Tarah Shropshire</span>
-                                    <span class="message-time">12:28 AM</span>
-                                    <div class="clearfix"></div>
-                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="topnav-dropdown-footer">
-                <a href="chat.html">See all messages</a>
+                        </div>
+                    </div>
+                    <div class="text-center m-t-20">
+                        <button class="btn btn-primary submit-btn" type="button" (click)="addExperience()">Add Experience</button>
+                    </div>
+                </form>
             </div>
         </div>
+<!-- EDUCATION -->
+        <div class="col-md-12">
+            <div class="card-box">
+                <h3 class="card-title">Add Education</h3>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-focus">
+                                <label for="eduTitle">Title</label>
+                                <input id="eduTitle" type="text" class="form-control" name="eduTitle" [(ngModel)]="newEducation.title" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-focus">
+                                <label for="eduPlace">School</label>
+                                <input id="eduPlace" type="text" class="form-control" name="eduPlace" [(ngModel)]="newEducation.school" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-focus">
+                                <label for="eduFrom">From</label>
+                                <input id="eduFrom" type="date" class="form-control" name="eduFrom" [(ngModel)]="newEducation.from" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-focus">
+                                <label for="eduTo">To</label>
+                                <input id="eduTo" type="date" class="form-control" name="eduTo" [(ngModel)]="newEducation.to" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group form-focus">
+                                <label for="expLocation">Location ID</label>
+                                <input id="expLocation" type="text" class="form-control" name="expLocation" [(ngModel)]="newEducation.locationId" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center m-t-20">
+                        <button class="btn btn-primary submit-btn" type="button" (click)="addEducation()">Add Education</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+<!-- TEST -->
+        <input type="text" list="browsers" />
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist> 
     </div>
-</div>
-<app-messages-sidebar></app-messages-sidebar>
+    <app-messages-sidebar></app-messages-sidebar>
 </div>

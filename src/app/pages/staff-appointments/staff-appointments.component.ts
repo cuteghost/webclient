@@ -11,7 +11,6 @@ export class StaffAppointmentsComponent implements OnInit {
   appointments: any[] = [];
   filteredAppointments: any[] = [];
   searchTerm: string = '';
-  editData: any = {};
 
   patients: any[] = []; // Array to store patient names
   doctors: any[] = []; // Array to store doctor names
@@ -26,6 +25,7 @@ export class StaffAppointmentsComponent implements OnInit {
   ngOnInit(): void {
     this.fetchAppointments();
     this.editForm = this.fb.group({
+      Id: [null],
       patientId: [null],
       staffId: [null],
       date: [null],
@@ -35,7 +35,7 @@ export class StaffAppointmentsComponent implements OnInit {
     if (this.selectedAppointment) {
       const dateValue = new Date(this.selectedAppointment.date).toISOString().substring(0, 16);
       this.editForm.patchValue({
-        appointmentId: this.selectedAppointment.id,
+        Id: this.selectedAppointment.id,
         patientId: this.selectedAppointment.patientId,
         staffId: this.selectedAppointment.staffId,
         date: new Date(this.selectedAppointment.date),
@@ -81,6 +81,7 @@ export class StaffAppointmentsComponent implements OnInit {
   }
   onSaveEditAppointment(editData: any) {
     const formData = this.editForm.value;
+    console.log(formData)
     if(formData)
     {
       this.AppointmentsService.updateAppointment(formData)
@@ -103,6 +104,7 @@ export class StaffAppointmentsComponent implements OnInit {
 
     const dateValue = new Date(this.selectedAppointment.date).toISOString().substring(0, 16);
     this.editForm.patchValue({
+      Id: this.selectedAppointment.id,
       patientId: this.selectedAppointment.patientId,
       staffId: this.selectedAppointment.staffId,
       date: dateValue,

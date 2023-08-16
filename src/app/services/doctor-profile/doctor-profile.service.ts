@@ -14,6 +14,6 @@ export class DoctorProfileService {
 
   getProfileData(): Observable<any> {
     const headers = this.authService.getHeaders();
-    return this.http.get<any>(`${this.apiUrl}/api/Staff/profile`, { headers });
+    return this.http.get<any>(`${this.apiUrl}api/Staff/profile`, { headers });
   }
 }

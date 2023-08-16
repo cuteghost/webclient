@@ -41,7 +41,7 @@ export class AppointmentsService {
 
   updateAppointment(editedAppointment: any): Observable<any> {
     const headers = this.authService.getHeaders();
-    return this.http.patch(`${this.baseUrl}api/Appointment`, editedAppointment, { headers });
+    return this.http.patch(`${this.baseUrl}api/Appointment/update`, editedAppointment, { headers });
   }
   deleteAppointment(appointmentId: any): Observable<any> {
     const headers = this.authService.getHeaders();

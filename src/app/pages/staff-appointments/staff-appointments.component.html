@@ -92,7 +92,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Appointment ID</label>
-                                        <input *ngIf="selectedAppointment" class="form-control" type="text" [value]="selectedAppointment.id" readonly="">
+                                        <input *ngIf="selectedAppointment" formControlName="id" class="form-control" type="text" [value]="selectedAppointment.id" readonly="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -136,7 +136,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" (click)="onSaveEditAppointment(editData)">Save changes</button>
+                        <button type="button" class="btn btn-primary" (click)="onSaveEditAppointment(editForm)">Save changes</button>
                     </div>
                 </div>
             </div>

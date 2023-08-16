@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; // Import the HttpClientModule
 import { ReactiveFormsModule } from '@angular/forms';
 import { JwtModule, JwtHelperService } from '@auth0/angular-jwt'; // Import JwtModule and JwtHelperService
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -59,6 +62,8 @@ import { PatientBlogsComponent } from './pages/patient-blogs/patient-blogs.compo
 import { PatientEditAppointmentComponent } from './pages/patient-edit-appointment/patient-edit-appointment.component';
 import { PatientAddAppointmentComponent } from './pages/patient-add-appointment/patient-add-appointment.component';
 import { StaffAppointmentsComponent } from './pages/staff-appointments/staff-appointments.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocationsComponent } from './components/locations/locations.component';
 
 
 @NgModule({
@@ -113,7 +118,8 @@ import { StaffAppointmentsComponent } from './pages/staff-appointments/staff-app
     PatientBlogsComponent,
     PatientEditAppointmentComponent,
     PatientAddAppointmentComponent,
-    StaffAppointmentsComponent
+    StaffAppointmentsComponent,
+    LocationsComponent
 
   ],
   imports: [
@@ -129,7 +135,11 @@ import { StaffAppointmentsComponent } from './pages/staff-appointments/staff-app
           return localStorage.getItem('authToken'); // Change this if you store the token with a different key
         }
       }
-    })
+    }),
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule
   ],
   providers: [JwtHelperService],
   bootstrap: [AppComponent]
