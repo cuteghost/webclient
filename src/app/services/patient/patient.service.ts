@@ -15,4 +15,8 @@ export class PatientService {
     const headers = this.authService.getHeaders();
     return this.http.get<any[]>(`${this.baseUrl}api/Patient/all`, { headers });
   }
+  deletePatient(userId: any): Observable<any> {
+    const headers = this.authService.getHeaders();
+    return this.http.delete(`${this.baseUrl}api/Patient/delete/${userId}`, { headers })
+  }
 }

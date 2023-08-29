@@ -7,6 +7,7 @@ import { JwtModule, JwtHelperService } from '@auth0/angular-jwt'; // Import JwtM
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { CustomDatePipe } from './custom-date.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -119,8 +120,8 @@ import { LocationsComponent } from './components/locations/locations.component';
     PatientEditAppointmentComponent,
     PatientAddAppointmentComponent,
     StaffAppointmentsComponent,
-    LocationsComponent
-
+    LocationsComponent,
+    CustomDatePipe,
   ],
   imports: [
     BrowserModule,

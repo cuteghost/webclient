@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PatientService } from '../../services/patient/patient.service';
+import { error } from 'console';
 
 @Component({
   selector: 'app-patients-page',
@@ -11,6 +12,8 @@ export class PatientsPageComponent implements OnInit {
   patients: any[]= []; // Assuming the patients array contains patient objects with name, age, address, phone, and email properties
   filteredPatients: any[] = []; // Contains filtered patients
   searchTerm: string = ''; // Holds the value of the search input
+
+  selectedPatientUserId: number | null = null;
 
   constructor(private router: Router, private patientService: PatientService) {}
 
@@ -61,6 +64,23 @@ export class PatientsPageComponent implements OnInit {
   navigateToPatient(patientId: number): void {
     // Navigate to the patient page with the patient's ID
     this.router.navigate(['/patient', patientId]);
+  }
+  onOpenDeletePatientModal(patientUserId: any) {
+    this.selectedPatientUserId = patientUserId;
+    console.log(this.selectedPatientUserId);
+  }
+  onDeletePatientClick() {
+    console.log("Uslo");
+    this.patientService.deletePatient(this.selectedPatientUserId).subscribe(
+      (res) => 
+      {
+        console.log(res);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+    this.selectedPatientUserId = null;
   }
   
 }
